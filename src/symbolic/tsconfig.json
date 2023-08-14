@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "esModuleInterop": true,
+    "tsBuildInfoFile": "./",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "useDefineForClassFields": true,
+    "strictFunctionTypes": true,
+    //    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "moduleDetection": "auto",
+    "target": "ESNext",
+    "resolveJsonModule": true,
+    //    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+  //  "types": ["node", "jest", "@testing-library/jest-dom"],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    },
+    "plugins": [
+      {
+        "name": "typescript-eslint-language-service"
+      }
+    ],
+    "noEmit": true,
+    "isolatedModules": true
+  },
+  "include": ["**/*.ts", "src/**/*.test.ts", "types/**/*.ts"],
+  "exclude": [
+    "**/node_modules",
+    "./instrumentation.ts",
+    "./instrumentation.node.ts",
+    "**/.*/",
+    "**/*/test.*"
+  ]
+}
