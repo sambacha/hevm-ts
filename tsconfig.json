@@ -33,6 +33,10 @@
       {
         "name": "typescript-eslint-language-service"
       }
-    ]
+    ],
+    "paths": {
+      "@/*": ["*"],
+      "symbolic/evm": ["symbolic/"]
+    },
   }
 }
