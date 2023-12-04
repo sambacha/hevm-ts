@@ -1,7 +1,7 @@
 import 'reflect-metadata'
 import { Disassembler } from './Disassembler'
 import { DisassembledContract } from './DisassembledContract'
-import { createEVMDisassembler } from '../symbolic/evm/exec/TestUtils';
+import { createEVMDisassembler } from '../symbolic/exec/TestUtils';
 let BN = require('bn.js')
 
 describe('Disassembler test', () => {
