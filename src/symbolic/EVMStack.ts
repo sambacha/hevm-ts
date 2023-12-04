@@ -1,29 +1,29 @@
-import { Word } from './Word'
+import { Word } from "./Word";
 
 export class EVMStack {
-  stack: Word[] = []
+  stack: Word[] = [];
 
   push(word: Word) {
-    this.stack.push(word)
+    this.stack.push(word);
   }
 
   pop(): Word {
-    return this.stack.pop()
+    return this.stack.pop();
   }
 
   peek(): Word {
-    return this.stack[this.stack.length - 1]
+    return this.stack[this.stack.length - 1];
   }
 
   get(index: number): Word {
-    return this.stack[this.stack.length - 1 - index]
+    return this.stack[this.stack.length - 1 - index];
   }
 
   put(index: number, word: Word) {
-    this.stack[this.stack.length - 1 - index] = word
+    this.stack[this.stack.length - 1 - index] = word;
   }
 
   length(): number {
-    return this.stack.length
+    return this.stack.length;
   }
 }

@@ -1,28 +1,28 @@
-import { Word } from './Word'
+import { Word } from "./Word";
 
 export class EVMStorage {
-  storage = {}
-  length
+  storage = {};
+  length;
 
   store(slot: Word, value: Word) {
     if (!slot || !value) {
-      return
+      return;
     }
     if (slot.isSymbolic) {
-      this.storage[slot.symbol] = value
+      this.storage[slot.symbol] = value;
     } else {
-      this.storage[slot.value] = value
+      this.storage[slot.value] = value;
     }
   }
 
   load(slot: Word): Word {
     if (!slot) {
-      return
+      return;
     }
     if (slot.isSymbolic) {
-      return this.storage[slot.symbol]
+      return this.storage[slot.symbol];
     } else {
-      return this.storage[slot.value]
+      return this.storage[slot.value];
     }
   }
 }

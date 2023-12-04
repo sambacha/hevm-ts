@@ -1,24 +1,29 @@
-import { createExecutor, createEVMDisassembler } from './TestUtils'
-import { EVMExecutor } from '../EVMExecutor'
-import { EthereumCFGCreator } from '@/../cfg/EthereumCFGCreator'
-import { Disassembler } from '@/../bytecode/Disassembler'
-import { OpcodeExecutor } from './OpcodeExecutor'
-import { EVMDisassembler } from '@/../bytecode/EVMDisassembler'
+import { createExecutor, createEVMDisassembler } from "./TestUtils";
+import { EVMExecutor } from "../EVMExecutor";
+import { EthereumCFGCreator } from "@/../cfg/EthereumCFGCreator";
+import { Disassembler } from "@/../bytecode/Disassembler";
+import { OpcodeExecutor } from "./OpcodeExecutor";
+import { EVMDisassembler } from "@/../bytecode/EVMDisassembler";
 
-describe('Jumpi', () => {
-  let cfgCreator: EthereumCFGCreator
-  let disassembler: Disassembler
-  let opcodeExecutor: OpcodeExecutor = new OpcodeExecutor()
+describe("Jumpi", () => {
+  let cfgCreator: EthereumCFGCreator;
+  let disassembler: Disassembler;
+  let opcodeExecutor: OpcodeExecutor = new OpcodeExecutor();
 
   beforeEach(() => {
-    cfgCreator = new EthereumCFGCreator()
-    disassembler = createEVMDisassembler()
-  })
+    cfgCreator = new EthereumCFGCreator();
+    disassembler = createEVMDisassembler();
+  });
 
-  it('Test Jumpi', () => {
-    const bytecode = '6001604057'
-    const executor: EVMExecutor = createExecutor(disassembler, bytecode, cfgCreator, opcodeExecutor)
-    executor.run(0)
-    expect(executor.evm.stack.length()).toEqual(0)
-  })
-})
+  it("Test Jumpi", () => {
+    const bytecode = "6001604057";
+    const executor: EVMExecutor = createExecutor(
+      disassembler,
+      bytecode,
+      cfgCreator,
+      opcodeExecutor,
+    );
+    executor.run(0);
+    expect(executor.evm.stack.length()).toEqual(0);
+  });
+});
