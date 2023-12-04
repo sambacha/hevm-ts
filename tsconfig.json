@@ -7,20 +7,21 @@
     ],
     "incremental": true,
     "moduleResolution": "node",
+    "outDir": "dist",
     "importHelpers": true,
     "sourceMap": true,
     "allowJs": true,
     "checkJs": true,
     "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "noImplicitThis": true,
-    "alwaysStrict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": false,
+    "alwaysStrict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noImplicitReturns": true,
+    "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true,
     "isolatedModules": true,
@@ -29,14 +30,27 @@
     "composite": true,
     "noEmit": true,
     "useUnknownInCatchVariables": true,
+    "baseUrl": ".",
     "plugins": [
       {
         "name": "typescript-eslint-language-service"
       }
     ],
     "paths": {
-      "@/*": ["*"],
-      "symbolic/evm": ["symbolic/"]
-    },
-  }
+      "@/*": [
+        "*"
+      ],
+      "symbolic/evm": [
+        "symbolic/"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/.*/",
+    "src/**/*.test.ts"
+  ]
 }

@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "description": "HEVM Symbolic Execution in Typescript",
   "main": "dist/index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
   "author": "SEE CONTRIBUTORS",
   "license": "AGPL-3.0",
   "devDependencies": {
+    "@swc/core": "^1.3.100",
+    "@swc/register": "^0.1.10",
     "@types/node": "^18.17.14",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
@@ -18,7 +19,7 @@
     "prettier": "^3.0.3",
     "process-tracing": "^1.0.2",
     "tslib": "^2.6.2",
-    "typescript": "^5.2.2",
+    "typescript": "^5.3.2",
     "typescript-eslint-language-service": "^5.0.5"
   },
   "dependencies": {
